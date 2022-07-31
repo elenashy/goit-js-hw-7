@@ -14,12 +14,5 @@ function CreateGalleryMarkup(galleryItems) {
     ).join('')
 }
 
-galleryEl.addEventListener('click', onImgClick)
+let gallerySimple = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250})
 
-function onImgClick(evt) {
-    evt.preventDefault()
-    let gallery = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250})
-    gallery.on('show.simplelightbox', function () {
-	console.log(`done`)
-});
-}
